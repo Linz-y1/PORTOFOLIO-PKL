@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papapapapap" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            Portfolio
+        </div>
+        <nav class="nav-menu">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
+        <div class="sidebar-toggle" id="sidebarToggle">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="profile-section">
+                <div class="profile-avatar">
+                    <img src="poto1.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile-name">Liyana Najwa</div>
+                <div class="profile-role">Web Developer</div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#about" class="sidebar-link active">
+                    <div class="sidebar-icon" style="background: #6366f1; color: white;">👤</div>
+                    About me
+                </a></li>
+                <li><a href="#skills" class="sidebar-link">
+                    <div class="sidebar-icon" style="background: #ef4444; color: white;">🔔</div>
+                    Skill
+                </a></li>
+                <li><a href="#projects" class="sidebar-link">
+                    <div class="sidebar-icon" style="background: #f59e0b; color: white;">📋</div>
+                    Project
+                </a></li>
+            </ul>
+            
+            <div class="social-links">
+                <a href="https://github.com" class="social-link">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://twitter.com" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="https://instagram.com" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+            <section id="about" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Liyana Najwa</h1>
+                    <p class="hero-subtitle"></p>
+                    
+                    <div class="hero-tags">
+                        <span class="tag">philosophy</span>
+                        <span class="tag">fairytale</span>
+                        <span class="tag">from 6 to 100 y.o</span>
+                    </div>
+
+                    <p class="hero-description">
+                 
+                       Saya adalah pelajar SMK Negeri 1 Bandung jurusan PPLG 
+                       (Pengembangan Perangkat Lunak dan Gim). Sejak duduk di bangku 
+                       SMP saya sudah memiliki ketertarikan pada bidang teknologi, khususnya dalam 
+                       pemrograman dan desain web. Di sekolah, saya mempelajari berbagai dasar ilmu 
+                       komputer seperti logika pemrograman, pembuatan website menggunakan HTML, CSS, dan 
+                       PHP, serta pengelolaan database dengan MySQL.
+                       <br>
+                       <br>
+                       Selain itu, saya juga berlatih menggunakan perangkat lunak 
+                       desain grafis sederhana untuk mendukung tampilan aplikasi atau website 
+                       yang saya buat. Saya terbiasa bekerja dengan tim saat mengerjakan proyek 
+                       kecil di kelas, sehingga saya dapat beradaptasi, berkomunikasi, dan berkolaborasi dengan baik.
+                       Saya memiliki semangat belajar yang tinggi, disiplin, dan selalu berusaha 
+                       menyelesaikan tugas dengan sebaik mungkin. Melalui program PKL, saya berharap dapat 
+                       memperdalam keterampilan teknis, memahami bagaimana dunia kerja di industri teknologi berjalan, 
+                       serta mengembangkan soft skill seperti kerja sama, komunikasi, dan tanggung jawab. Dengan pengalaman ini, 
+                       saya ingin mempersiapkan diri agar kelak dapat bersaing di dunia kerja maupun melanjutkan pendidikan ke jenjang yang lebih tinggi.
+                    </p>
+
+                    <!-- <div class="hero-buttons">
+                        <div class="btn btn-primary">Paperback<br>18.99 $</div>
+                        <div class="btn btn-secondary">E-book<br>4.99 $</div>
+                    </div> -->
+                </div>
+
+                 <div class="hero-image">
+                    <div class="profile-avatar">
+                       <img src="poto1.jpg" alt="">
+                    </div>
+
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background: linear-gradient(45deg, #61dafb, #21d4fd);">
+                            <ion-icon name="logo-microsoft"></ion-icon>
+                        </div>
+                        <h3 class="card-title">Microsoft</h3>
+                        <p class="card-description">Excel & word</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background: linear-gradient(45deg, #f7df1e, #ffcd02);">
+                            <ion-icon name="logo-javascript"></ion-icon>
+                        </div>
+                        <h3 class="card-title">JavaScript</h3>
+                        <p class="card-description">interactive web</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background: linear-gradient(45deg, #1572b6, #33a9dc);">
+                            <ion-icon name="logo-css3"></ion-icon>
+                        </div>
+                        <h3 class="card-title">CSS/SASS</h3>
+                        <p class="card-description">Responsive Design</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="recommendations">
+                    <h3>You may like</h3>
+                    <div class="projects-grid">
+                       <div class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="jamdi.png" alt="Jam Digital">
+                            </div>
+                            <h4 class="card-title">Jam Digital</h4>
+                            <a href="jam/indez.html">Lihat Project</a>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-thumbnail">
+                                <img src="poto2.png" alt="Weather Dashboard">
+                            </div>
+                            <h4 class="card-title">Mini Game</h4>
+                            <a href="game/index.html">Lihat Project</a>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-thumbnail">
+                                <img src="poto3.png" alt="Task Manager">
+                            </div>
+                            <h4 class="card-title">Pixel Drawing</h4>
+                            <a href="new/index.html">Lihat Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <h2 class="footer-title">My Portfolio</h2>
+    <p class="footer-text">Thank you for visiting my personal portfolio website.</p>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Liyana. All rights reserved.
+  </div>
+</footer>
+
+
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            sidebarToggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close sidebar after clicking
+                    if (sidebar.classList.contains('active')) {
+                        toggleSidebar();
+                    }
+                }
+            });
+        });
+
+        // Update active nav and sidebar links based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 120;
+            const navLinks = document.querySelectorAll('.nav-menu a');
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+
+                if (scrollPos >= top && scrollPos <= top + height) {
+                    // Update navbar
+                    navLinks.forEach(link => {
+                        link.style.color = '#374151';
+                        link.style.background = 'transparent';
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.style.color = '#6366f1';
+                            link.style.background = 'rgba(99, 102, 241, 0.1)';
+                        }
+                    });
+
+                    // Update sidebar
+                    sidebarLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

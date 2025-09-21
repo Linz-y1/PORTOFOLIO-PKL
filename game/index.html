@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kucing Kotak Game</title>
+  <style>
+    body {
+      font-family: 'Press Start 2P', monospace, sans-serif;
+      background: repeating-linear-gradient(
+        45deg,
+        #fcb69f,
+        #fcb69f 10px,
+        #ffecd2 10px,
+        #ffecd2 20px
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      image-rendering: pixelated;
+    }
+
+    .game-container {
+      width: 420px;
+      background: #eaeaea;
+      border: 6px solid #222;
+      border-radius: 0;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 0 0 8px #fff, 0 0 0 12px #222;
+    }
+
+    h2 {
+      margin: 8px 0 16px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    #game-area {
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      background: #c0c0c0;
+      border: 4px solid #222;
+      outline: 4px solid #fff;
+      image-rendering: pixelated;
+    }
+
+    .box {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: #ff3131;
+      border: 3px solid #222;
+      box-shadow: inset -4px -4px #b10000, inset 4px 4px #ff8888;
+      cursor: pointer;
+    }
+
+    #start-btn {
+      padding: 12px 18px;
+      margin-top: 12px;
+      border: 3px solid #222;
+      background: #32cd32;
+      color: #fff;
+      font-size: 10px;
+      cursor: pointer;
+      box-shadow: 4px 4px #222;
+    }
+    #start-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px #222;
+    }
+
+    .info {
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: bold;
+      background: #fff;
+      display: inline-block;
+      padding: 6px 10px;
+      border: 3px solid #222;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <h2>Kucing Kotak Game 🐱</h2>
+
+    <div id="game-area"></div>
+
+    <button id="start-btn">START</button>
+    <div class="info">
+      Skor: <span id="score">0</span> | Waktu: <span id="time">30</span>
+    </div>
+  </div>
+
+  <script>
+    const gameArea = document.getElementById("game-area");
+    const startBtn = document.getElementById("start-btn");
+    const scoreDisplay = document.getElementById("score");
+    const timeDisplay = document.getElementById("time");
+
+    let score = 0;
+    let timeLeft = 30;
+    let gameInterval;
+    let boxInterval;
+    let spawnSpeed = 1000;
+
+    startBtn.addEventListener("click", startGame);
+
+    function startGame() {
+      score = 0;
+      timeLeft = 30;
+      spawnSpeed = 1000;
+      scoreDisplay.textContent = score;
+      timeDisplay.textContent = timeLeft;
+      gameArea.innerHTML = "";
+      startBtn.disabled = true;
+
+      gameInterval = setInterval(() => {
+        timeLeft--;
+        timeDisplay.textContent = timeLeft;
+        if (timeLeft <= 0) {
+          endGame();
+        }
+      }, 1000);
+
+      spawnBox();
+    }
+
+    function spawnBox() {
+      const box = document.createElement("div");
+      box.classList.add("box");
+
+      const x = Math.random() * (gameArea.clientWidth - 50);
+      const y = Math.random() * (gameArea.clientHeight - 50);
+      box.style.left = `${x}px`;
+      box.style.top = `${y}px`;
+
+      box.addEventListener("click", () => {
+        score++;
+        scoreDisplay.textContent = score;
+        box.remove();
+
+        spawnSpeed = Math.max(300, spawnSpeed - 50);
+        clearInterval(boxInterval);
+        boxInterval = setInterval(spawnBox, spawnSpeed);
+      });
+
+      gameArea.appendChild(box);
+
+      setTimeout(() => {
+        if (gameArea.contains(box)) {
+          box.remove();
+        }
+      }, 1000);
+
+      clearInterval(boxInterval);
+      boxInterval = setInterval(spawnBox, spawnSpeed);
+    }
+
+    function endGame() {
+      clearInterval(gameInterval);
+      clearInterval(boxInterval);
+      startBtn.disabled = false;
+      alert(`Game Over! Skor kamu: ${score}`);
+    }
+  </script>
+</body>
+</html>
