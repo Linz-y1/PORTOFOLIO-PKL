@@ -1,4 +1,6 @@
-        * {
+      
+      
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -269,6 +271,17 @@
             flex: 1;
             max-width: 700px;
         }
+        .hero-content h1 {  
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .hero-content h3 {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
 
         .hero-title {
             font-size: 48px;
@@ -385,6 +398,9 @@
             color: #374151;
             margin-bottom: 30px;
             text-align: left;
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .recommendations {
@@ -401,6 +417,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
+}
+
+.recommendations h3 {
+
+    font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .project-card, .skill-card {
@@ -514,10 +538,14 @@
   text-align: center;
 }
 
-.footer-title {
+.footer-content {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+    font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .footer-text {
